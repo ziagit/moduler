@@ -1,0 +1,14 @@
+p{
+    background: blue;
+    transition: width 0.2s;
+    color: black;
+}
+.red{
+    color: red;
+    width: 300px;
+}
+.green{
+    color: green;
+    width: 0;
+    overflow: hidden;
+}

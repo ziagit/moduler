@@ -1,0 +1,29 @@
+:host{
+  mat-grid-tile{
+    background: #00a9e0;
+    color: #ffffff;
+  }
+  h3{
+    color: #999;
+    margin: 10px;
+  }
+  .test-container{
+    padding: 20px;
+    mat-card{
+      margin-bottom: 10px;
+      mat-card-actions{
+        img{
+          width: 20px;
+        }
+      }
+    }
+  }
+/*   .container{
+    display: flex;
+    justify-content: space-evenly;
+    mat-card{
+      width: 150px;
+    }
+  } */
+}
+

@@ -1,0 +1,15 @@
+:host{
+    .mat-elevation-z8{
+        width: 98%;
+        margin: 10px auto;
+    }
+    button{
+        float: right;
+    }
+    table {
+        width: 100%;
+        .action:hover{
+            cursor: pointer;
+        }
+    }
+}

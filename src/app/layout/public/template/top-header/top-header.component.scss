@@ -1,0 +1,42 @@
+:host{
+    display: flex;
+    background: #F1F1F1;
+    align-items: center;
+    padding: 5px;
+    color: #666;
+    .left-content{
+        display: flex;
+        align-items: center;
+        flex: 4;
+    }
+    .search{
+        flex: 11;
+        .form{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            input{
+                height: 22px;
+                border: solid 1px #ddd;
+                border-radius: 4px;
+                width: 100%;
+                color: #666;
+                font-family: Roboto,"Helvetica Neue",sans-serif;
+            }
+            button{
+                min-width: 24px;
+                line-height: 26px;
+                color: #F1F1F1;
+                background: #0080FF;
+            }
+        }
+       
+    }
+    .right-content{
+        flex: 8;
+        text-align: right;
+    }
+/*     @media screen (max-width:600px){
+        
+    } */
+}

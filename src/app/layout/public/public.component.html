@@ -1,0 +1,54 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+  <!-- <app-top-header></app-top-header> -->
+  <mat-toolbar class="example-toolbar">
+    <button mat-icon-button (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <section class="right-content">
+      <button mat-button [matMenuTriggerFor]="appMenu">
+        <mat-icon>apps</mat-icon>
+      </button>
+      <mat-menu #appMenu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>settings</mat-icon> Settings
+        </button>
+        <button mat-menu-item>
+          <mat-icon>help</mat-icon> Helps
+        </button>
+      </mat-menu>
+      <button mat-button [matMenuTriggerFor]="notifyMenu">
+        <mat-icon matBadge="2" matBadgeColor="">notifications</mat-icon>
+      </button>
+      <mat-menu #notifyMenu="matMenu">
+        <button mat-menu-item>Notification 1</button>
+        <button mat-menu-item>Notification 2</button>
+      </mat-menu>
+      <button mat-button [matMenuTriggerFor]="languageMenu">
+        <mat-icon>language</mat-icon>
+      </button>
+      <mat-menu #languageMenu="matMenu">
+        <button mat-menu-item>English</button>
+        <button mat-menu-item>دری</button>
+      </mat-menu>
+      <button mat-button [matMenuTriggerFor]="userMenu">
+        <mat-icon>person</mat-icon>
+      </button>
+      <mat-menu #userMenu="matMenu">
+        <button mat-menu-item (click)="signin()" *ngIf="!isLoggedIn">Login</button>
+        <button mat-menu-item (click)="signout()" *ngIf="isLoggedIn">Logout</button>
+        <button mat-menu-item (click)="signup()">Signup</button>
+      </mat-menu>
+    </section>
+  </mat-toolbar>
+  <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+      fixedTopGap="56">
+      <mat-nav-list>
+        <app-side-menu></app-side-menu>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

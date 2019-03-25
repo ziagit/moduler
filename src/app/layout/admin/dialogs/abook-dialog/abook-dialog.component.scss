@@ -1,0 +1,22 @@
+:host{
+    mat-form-field{
+        width: 100%;
+    }
+    mat-dialog-actions{
+        float: right;
+    }
+    .upload-file-container{
+        display: flex;
+        justify-content: space-around;
+        input[type="file"] {
+            display: none;
+        }
+        .file-lable {
+            color: #666;
+            display: flex;
+            align-items: center;
+            padding: 4px 8px;
+            cursor: pointer;
+        }
+    }
+}

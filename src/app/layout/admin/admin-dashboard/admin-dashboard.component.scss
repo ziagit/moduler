@@ -1,0 +1,22 @@
+:host{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    mat-card{
+        min-width: 20%;
+        margin: 7px 0;
+    }
+}
+@media (max-width:475px) {
+    :host{
+        display: flex;
+        padding: 5px;
+        justify-content: space-evenly;
+        mat-card{
+            width:40%;
+        }
+    }
+
+}

@@ -1,0 +1,62 @@
+<h2 mat-dialog-title> Book Registeration</h2>
+<mat-dialog-content>
+
+  <form [formGroup]="bookForm">
+    <mat-form-field>
+      <input matInput formControlName="name" placeholder="Name">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput formControlName="author" placeholder="Author">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput formControlName="publisher" placeholder="Publisher">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" formControlName="publish_date" placeholder="Publish Date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput formControlName="summary" placeholder="Summary">
+    </mat-form-field>
+
+    <div class="upload-file-container">
+      <label for="image" class="file-lable">
+        <mat-icon>cloud_upload</mat-icon> &nbsp;<span>Image</span>
+      </label>
+      <input type="file" id="image" (change)="uploadImage($event)">
+
+      <label for="pdf" class="file-lable">
+        <mat-icon>cloud_upload</mat-icon>&nbsp;<span>PDF</span>
+      </label>
+      <input type="file" id="pdf" (change)="uploadPDF($event)">
+
+      <label for="mp3" class="file-lable">
+        <mat-icon>cloud_upload</mat-icon>&nbsp; <span>MP3</span>
+      </label>
+      <input type="file" id="mp3" (change)="uploadMP3($event)">
+    </div>
+    <!--     <mat-form-field>
+      <input matInput type="file" formControlName="image_path" placeholder="Image">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput  type="file" formControlName="pdf_path" placeholder="PDF">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="file" formControlName="mp3_path" placeholder="MP3">
+    </mat-form-field> -->
+
+
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="true" (click)="save(bookForm.value)" [disabled]="false">Save</button>
+  <button mat-button mat-dialog-close>Cancel</button>
+</mat-dialog-actions>
