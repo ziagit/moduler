@@ -5,6 +5,11 @@
         width: 150px;
         font-family: "Roboto","Helvetica Neue",sans-serif;
     }
+    .mat-list-item{
+        img{
+            width: 20px;
+        }
+    }
     .mat-list-item:hover{
         cursor: pointer;
     }

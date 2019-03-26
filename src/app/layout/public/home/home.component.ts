@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { StaticDataService } from '../services/static-data.service';
+import { StaticDataService } from 'src/assets/static-data.service';
 export interface Tile {
   color: string;
   cols: number;

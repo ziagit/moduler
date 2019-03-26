@@ -1,5 +1,7 @@
-<h6>Top Category</h6>
+<h6>Top Categories</h6>
 <mat-list>
-  <mat-list-item *ngFor="let link of links" routerLink="{{link.path}}"> {{link.name}} </mat-list-item>
+  <mat-list-item *ngFor="let link of links" routerLink="{{link.path}}">
+    <img src="{{link.icon}}" alt="">
+    {{link.name}} </mat-list-item>
 
 </mat-list>

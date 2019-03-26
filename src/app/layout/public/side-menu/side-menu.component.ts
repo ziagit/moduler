@@ -24,10 +24,14 @@ export class SideMenuComponent implements OnInit {
       );
     }else{
       this.links.push(
-        { name: "Home", path: "/home" },
-        { name: "Books", path: "/book" },
-        { name: "Games", path: "/game" },
-        { name: "Videos", path: "/video" },
+        { name: "Home", path: "/home",icon:'assets/images/home.svg' },
+        { name: "JavaScript", path: "/book",icon:'assets/images/javascript.svg' },
+        { name: "Angular", path: "/game",icon:'assets/images/angular.svg' },
+        { name: "Vue", path: "/video",icon:'assets/images/vue.svg' },
+        { name: "React", path: "/game",icon:'assets/images/react.svg' },
+        { name: "Ionic", path: "/video",icon:'assets/images/ionic.svg' },
+        { name: "NodeJs", path: "/book",icon:'assets/images/node.svg' },
+        { name: "Laravel", path: "/game",icon:'assets/images/laravel.svg' },
       );
     }
   }
